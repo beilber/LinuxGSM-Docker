@@ -53,7 +53,6 @@ RUN echo "**** Install Base LinuxGSM Requirements ****" \
     util-linux \
     wget \
     xz-utils \
-	libtinfo5:i386 \
     # Docker Extras
     cron \
     iproute2 \
@@ -69,7 +68,7 @@ RUN echo "**** Install SteamCMD ****" \
     && echo steam steam/license note '' | debconf-set-selections \
     && dpkg --add-architecture i386 \
     && apt-get update -y \
-    && apt-get install -y --no-install-recommends libsdl2-2.0-0:i386 steamcmd \
+    && apt-get install -y --no-install-recommends libtinfo5:i386 libsdl2-2.0-0:i386 steamcmd \
     && ln -s /usr/games/steamcmd /usr/bin/steamcmd
 
 # Install NodeJS
