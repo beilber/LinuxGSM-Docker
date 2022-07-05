@@ -53,6 +53,7 @@ RUN echo "**** Install Base LinuxGSM Requirements ****" \
     util-linux \
     wget \
     xz-utils \
+	libtinfo5:i386 \
     # Docker Extras
     cron \
     iproute2 \
